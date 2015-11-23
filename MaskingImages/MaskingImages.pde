@@ -1,14 +1,16 @@
 PImage cranberry;
 PImage mask;
+PImage mash2;
 
 void setup(){
-size(2000,2000);
+size(1600,1064);
+mash2 = loadImage("mash2.jpg");
 cranberry = loadImage("cranberry.jpg");
 mask = loadImage("mask.jpg");
 cranberry.mask(mask);
 }
 
 void draw(){
-background(200,200);
+background(mash2);
 image(cranberry, mouseX, mouseY);
 }
