@@ -1,8 +1,12 @@
+PImage binoc; 
+PImage meerkats;
+
 void setup(){
-size(800,600);
-}
+   size(800,600);
+   binoc = loadImage("binoc.jpg");
+   meerkats = loadImage("meerkats.jpg");
+   binoc.blend(meerkats, 0, 0, binoc.width, binoc.height, 0,0, meerkats.width, meerkats.height, DARKEST);
+  }
 void draw(){
-  filter(BLUR); 
-fill(random(255), random(255), random(255));
-ellipse(random(width), random(height), random(100), random(100));
+  image(binoc,0,0);
 }
