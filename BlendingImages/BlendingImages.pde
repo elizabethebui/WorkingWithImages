@@ -8,5 +8,6 @@ void setup(){
    binoc.blend(meerkats, 0, 0, binoc.width, binoc.height, 0,0, meerkats.width, meerkats.height, DARKEST);
   }
 void draw(){
-  image(binoc,0,0);
+  background(0);
+  image(binoc,mouseX,mouseY);
 }
